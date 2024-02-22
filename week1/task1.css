@@ -1,0 +1,25 @@
+html,
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+}
+
+body {
+    background-color: rgb(26, 26, 26);
+}
+
+.container {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.head {
+    text-align: center;
+}
+
+#bold {
+    font-size: 25px;
+    font-weight: bold;
+}
+
