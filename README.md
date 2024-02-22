@@ -1,4 +1,4 @@
-# Materi Pemrograman Web
+# README
 
 Repository ini berisi tugas perkuliahan mata kuliah Pemrograman Berbasis Web (PBW). Mencakup berbagai materi perkuliahan, termasuk: materi untuk belajar berbagai teknologi dan konsep pemrograman web termasuk HTML, CSS, JavaScript, Bootstrap, GitHub, PHP (Native dan OOP), MySQL, operasi CRUD, Autentikasi & Otorisasi, dan pengembangan REST API.
 
