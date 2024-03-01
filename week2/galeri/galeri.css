@@ -34,7 +34,7 @@ html,
         border-collapse: collapse;
       }
 
-      /* Set full width for images */
+      /* full width */
     img {
         width: 100%;
         height: auto;
