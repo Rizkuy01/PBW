@@ -1,0 +1,14 @@
+html,
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+}
+
+body {
+    background-color: rgb(26, 26, 26);
+}
+
+.container {
+
+}

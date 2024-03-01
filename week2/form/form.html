@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2 - Form</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="head">
+        <h1>Pendaftaran Mahasiswa Baru</h1>
+        <p>By: Muhammad Rizky Saputra | on 01 March 2024 | 2210631250021</p>
+      </div>
+
+      <div class="form">
+        <form action="#" method="get" id="pmb">
+          <!-- input NPM -->
+          <label for="npm">NPM (Nomor Pokok Mahasiswa)</label>
+          <input type="text" name="npm" id="npm" />
+          <br />
+
+          <!-- input fullname -->
+          <label for="fullname">Nama Lengkap</label>
+          <input type="text" name="fullname" id="fullname" />
+          <br />
+
+          <!-- input address -->
+          <label for="address">Alamat</label>
+          <textarea name="address" id="address" cols="30" rows="10"></textarea>
+          <br />
+
+          <!-- select gender -->
+          <label for="jk">Jenis Kelamin</label>
+          <input type="radio" name="jk" id="jk" value="Laki-Laki" /> Laki-Laki
+          <input type="radio" name="jk" id="jk" value="Perempuan" /> Perempuan
+          <br />
+
+          <!-- degree option -->
+          <label for="degree">Program Studi</label>
+          <select name="degree" id="degree">
+            <option value="NULL">Program Studi</option>
+            <option value="Teknik Informatika">Teknik Informatika</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+          </select>
+        </form>
+        <br />
+
+        <!-- submit button -->
+        <button type="button">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>

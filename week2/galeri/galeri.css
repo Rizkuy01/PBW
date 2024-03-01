@@ -1,0 +1,41 @@
+html,
+
+/* Reset default styles */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: rgb(26, 26, 26);
+}
+  
+  /* Container */
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+    /* Head */
+    .head {
+        text-align: center;
+      }
+
+      .table {
+        padding: 20px;
+      }
+
+      table, th, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+      }
+
+      /* Set full width for images */
+    img {
+        width: 100%;
+        height: auto;
+    }
