@@ -27,6 +27,8 @@ html,
     
       .table {
         width: auto;
+        padding: 20px;
+        margin-left: 80px;
       }
       
       .table-header {
