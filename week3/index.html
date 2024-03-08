@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>BELAJAR JAVASCRIPT</h1>
+
+    <!-- inline -->
+    <button onclick="alert('hello world!')">click me</button>
+
+    <!-- internal -->
+    <!-- <script>
+      alert("Halo ini merupakan alert yang saya buat dengan javascript");
+    </script> -->
+
+    <!-- eksternal -->
+    <script src="script.js"></script>
+
+    <!-- let -->
+    <h2>Redeclaring a Variable Using var</h2>
+    <p id="demo"></p>
+
+    <h1>Fibonacci Sequence Generator</h1>
+    <label for="fibonacci-number"
+      >Enter the number of Fibonacci numbers to generate:</label
+    >
+    <input type="number" id="fibonacci-number" min="1" value="5" />
+    <button onclick="generateFibonacci()">Generate</button>
+
+    <div id="fibonacci-sequence"></div>
+
+    <script>
+      var x = 10;
+      // Here x is 10
+
+      var y = 20;
+      // Here y is 2
+
+      // expample
+      document.getElementById("demo").innerHTML = x + y;
+
+      function generateFibonacci() {
+        const num = document.getElementById("fibonacci-number").value;
+        const sequence = [0, 1];
+
+        for (let i = 2; i < num; i++) {
+          const nextFib = sequence[i - 1] + sequence[i - 2];
+          sequence.push(nextFib);
+        }
+
+        const sequenceDiv = document.getElementById("fibonacci-sequence");
+        sequenceDiv.innerHTML =
+          "<p>The Fibonacci sequence:</p>" + sequence.join(", ");
+      }
+    </script>
+
+    <!-- const -->
+  </body>
+</html>
