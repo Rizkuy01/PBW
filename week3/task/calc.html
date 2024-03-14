@@ -4,73 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <style>
-      /* Styles for the calculator */
-      .calculator {
-        width: 250px;
-        margin: 50px auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #333232;
-      }
-      .calculator input {
-        margin-bottom: 10px;
-        padding: 10px;
-        font-size: 16px;
-      }
-      .calculator button {
-        width: 50px;
-        padding: 10px;
-        margin: 5px;
-        font-size: 16px;
-        cursor: pointer;
-      }
-    </style>
+    <link rel="stylesheet" href="calc.css" />
   </head>
   <body>
-    <div class="calculator">
-      <input type="text" id="display" disabled />
-      <button onclick="clearDisplay()">C</button>
-      <button onclick="appendToDisplay('%')">%</button>
-      <button onclick="appendToDisplay('/')">/</button>
-      <button onclick="appendToDisplay('*')">*</button>
-      <button onclick="appendToDisplay('+')">+</button>
-      <button onclick="appendToDisplay('-')">-</button>
-      <button onclick="appendToDisplay('7')">7</button>
-      <button onclick="appendToDisplay('8')">8</button>
-      <button onclick="appendToDisplay('9')">9</button>
-      <button onclick="appendToDisplay('4')">4</button>
-      <button onclick="appendToDisplay('5')">5</button>
-      <button onclick="appendToDisplay('6')">6</button>
-      <button onclick="appendToDisplay('1')">1</button>
-      <button onclick="appendToDisplay('2')">2</button>
-      <button onclick="appendToDisplay('3')">3</button>
-      <button onclick="calculate()">=</button>
-      <button onclick="appendToDisplay('0')">0</button>
-      <button onclick="appendToDisplay('.')">.</button>
+    <div class="container">
+      <!-- head -->
+      <div class="head">
+        <h1>Kalkulator Sederhana</h1>
+        <p>By: Muhammad Rizky Saputra | on 08 March 2024 | 2210631250021</p>
+      </div>
+      <!-- calculator -->
+      <div class="calculator">
+        <input type="text" id="display" disabled />
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="appendToDisplay('%')">%</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <button onclick="appendToDisplay('*')">*</button>
+        <button onclick="appendToDisplay('+')">+</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+      </div>
+      <!-- history -->
+      <div class="history" id="history"></div>
     </div>
 
     <script>
       const display = document.getElementById("display");
+      const historyDisplay = document.getElementById("history");
+      let history = [];
 
+      //input value on display
       function appendToDisplay(value) {
         display.value += value;
       }
 
+      //clear value on display
       function clearDisplay() {
         display.value = "";
       }
 
+      //calculate value on display
       function calculate() {
         const expression = display.value;
         try {
           const result = eval(expression);
           display.value = result;
+          addToHistory(expression + " = " + result);
         } catch (error) {
           display.value = "Error";
         }
       }
+
+      //create a history from calculate function
+      function addToHistory(operation) {
+        history.push(operation);
+        updateHistoryDisplay();
+      }
+
+      //update a new history
+      function updateHistoryDisplay() {
+        historyDisplay.innerHTML =
+          "<strong>History:</strong><br>" + history.join("<br>");
+      }
+
+      // event listeners keyboard
+      document.addEventListener("keydown", function (event) {
+        const key = event.key;
+        const validKeys = [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          ".",
+          "+",
+          "-",
+          "*",
+          "/",
+          "%",
+          "=",
+          "Enter",
+          "Backspace",
+        ];
+        if (validKeys.includes(key)) {
+          if (key === "Enter" || key === "=") {
+            calculate();
+          } else if (key === "Backspace") {
+            clearDisplay();
+          } else {
+            appendToDisplay(key);
+          }
+        }
+      });
     </script>
   </body>
 </html>

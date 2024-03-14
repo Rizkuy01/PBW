@@ -1,0 +1,48 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: rgb(26, 26, 26);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .head {
+    padding-top: 20px;
+    text-align: center;
+    color: whitesmoke;
+  }
+
+/* kalkulator */
+.calculator {
+    width: 250px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #bbbbbb;
+  }
+  .calculator input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .calculator button {
+    width: 50px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .history {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbbbbb;
+  }
